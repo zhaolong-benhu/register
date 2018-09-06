@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="http://static.v.veimg.cn/image/index/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="css/jquery.cxcalendar.css">
+    <link rel="stylesheet" href="http://f3.v.veimg.cn/veryeast/resume/css/theme/cock_skin/orange.css">
+    <link rel="stylesheet" href="http://f3.v.veimg.cn/veryeast/resume/css/theme/layer_skin/orange.css">
+    <title>注册</title>
+    <style>
+    body,html{
+        padding:0;margin:0;width:100%;height:100%;;overflow:hidden;background:#f1f1f1;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <img src="./images/head.png" alt="">
+        </div>
+        <div class="content">
+            <div class="title">29万个职位，9.2万家企业，等你来撩！</div>
+            <img src="./images/dottedine.png" alt="">
+            <div class="infos resume_content_right">
+                <div class="info">
+                    <div class="info-key">姓名：</div>
+                    <div class="info-value">
+                        <input class="name" type="text" name="" id="name" value="" maxlength="20" placeholder="请输入姓名">
+                        <span class="sex">性别:</span>
+                        <input type="radio" name="DoorCt" id="" value="男" checked onclick="getValue()">男
+                        <input type="radio" name="DoorCt" id="" value="女" onclick="getValue()">女
+                        <span class="error-name">姓名不能为空</span>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-key">手机号：</div>
+                    <div class="info-value">
+                        <input class="phone" type="text" name="" id="phone" value="" maxlength="11" placeholder="手机号">
+                        <span class="error-phone" id="error-phone">手机号不能为空</span>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-key">验证码：</div>
+                    <div class="info-value">
+                        <input class="code" type="text" name="" id="code" value="" maxlength="6">
+                        <img class="captcha" src="http://sso.veryeast.cn/user/captcha" onclick="getCaptcha()"  id="captcha" alt="图片验证码">
+                        <span class="error-code" id="error-code">验证码不能为空</span>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-key">短信验证码：</div>
+                    <div class="info-value">
+                        <input class="code" type="text" name="" id="phone-code" value="" maxlength="6">
+                        <Button class="getcode-btn" id="getcode-btn" onclick="getCode(this)">获取验证码</Button>
+                        <span class="error-phone-code" id="error-phone-code">短信验证码不能为空</span>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-key">密码：</div>
+                    <div class="info-value">
+                        <input class="phone" type="password" name="" id="password" value="" maxlength="20" placeholder="请输入6-20个字母或数字的密码">
+                        <span class="error-password" id="error-password">密码不能为空</span>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-key">意向职位：</div>
+                    <div class="info-value">
+                        <div id="btnFuntype" class="resume_select_btn kwbtn" data-multi="5" data-name="post" data-placeholder="选择/修改" data-title="选择/修改" title="公寓营运人员+酒吧/大堂吧/咖啡厅员工+西厨热菜厨师+客房部员工+乐园策划">
+                        <span class="ellipsis" id="love-job">选择/修改</span>
+                        <input id="funtype" type="hidden" name="funtype" value="3006,1508,1704,1310,2902">
+                    </div>
+                        <span class="error-love-job">请选择意向职位</span>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-key">意向行业：</div>
+                    <div class="info-value">
+                        <div id="btnenterprisetype" class="resume_select_btn kwbtn" data-multi="5" data-name="class" data-placeholder="选择/修改" data-title="选择/修改" title="选择/修改">
+                            <span class="ellipsis" id="love-trade">选择/修改</span>
+                            <input id="company_type" type="hidden" name="industry" value="">
+                        </div>
+                        <span class="error-love-trade">请选择意向行业</span>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-key">出生日期：</div>
+                    <div class="info-value">
+                        <input class="date" type="text" name="mydate" id="born_date" value=""  readonly placeholder="年 / 月 / 日">
+                        <span class="error-born-date">出生日期不能为空</span>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info-key">最高学历：</div>
+                    <div class="info-value">
+                        <select class="schooling" name="">
+                            <option value="不限">不限</option>
+                            <option value="初中">初中</option>
+                            <option value="高中">高中</option>
+                            <option value="中技">中技</option>
+                            <option value="中专">中专</option>
+                            <option value="大专">大专</option>
+                            <option value="本科">本科</option>
+                            <option value="硕士">硕士</option>
+                            <option value="博士">博士</option>
+                        </select>
+                        <span class="error-schooling">最高学历不能为空</span>
+                    </div>
+                </div>
+            </div>
+            <div class="register-btn" onclick="onRegisterBtn()">立即注册</div>
+        </div>
+        <div class="copyright">Copyright ©2003 - 2018 VeryEast.Cn All Rights Reserved</div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://f3.v.veimg.cn/veryeast/resume/js/window.js?v=20180125"></script>
+    <script src="js/jquery.cxcalendar.js"></script>
+    <script src="js/jquery.cxcalendar.languages.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

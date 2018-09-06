@@ -1,0 +1,144 @@
+.container{
+    width: 720px;;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.head{
+    width: 720px;
+    text-align: left;
+    margin: 53px 0px 20px 10px;
+}
+.content{
+    width: 720px;
+    height: 615px;
+    background: #fff;
+    padding: 30px 0px;
+}
+.title{
+    font-size: "微软雅黑";
+    font-size: 24px;
+    color: #e56e20;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    /* margin-top: 10px; */
+}
+.infos{
+    padding: 20px 0px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #000;
+}
+.info{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.info-key{
+    width: 210px;
+    float: left;
+    /* background: green; */
+    text-align: right;
+}
+.info-key::before{
+    content: "*";
+    color: red;
+}
+.info-value{
+    width: 510px;
+    float: right;
+    text-align: left;
+    position: relative;
+}
+.name,.phone,.code,.date,.schooling{
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #c3c1c1;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding-left: 5px;
+}
+.sex{
+    width: 5px;
+}
+.sex::before{
+    content: "*";
+    color: red;
+}
+.phone{
+    width: 280px;
+}
+.code{
+    width: 140px;
+}
+.date{
+    width:185px;
+}
+.schooling{
+    width: 185px;
+}
+.captcha{
+    height: 30px;
+    bottom: 5px;
+    position: absolute;
+}
+.getcode-btn{
+    background: #fae9cf;
+    /* border-color: #f9e1bb; */
+    border: 1px solid #f9e1bb;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+.getcode-btn:hover{
+    /* background: #ec5816; */
+    /* border-color: #ffa00a; */
+    border: 1px solid #ffa00a;
+
+}
+.register-btn{
+    width: 285px;
+    height: 50px;
+    background: #ff4f00;
+    margin: 0 auto;
+    line-height: 50px;
+    border-radius: 5px;
+    color: #fefbfa;
+    font-size: 19px;
+    /* position: absolute; */
+    margin-top: 30px;
+    cursor: pointer;
+    letter-spacing:5px;
+    font-family: "微软雅黑 Regular";
+}
+.register-btn:hover{
+    background: #f16c30;
+}
+.copyright{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+
+.error-name,.error-phone,.error-code,.error-phone-code,.error-password,.error-love-job,.error-love-trade,.error-born-date,.error-schooling{
+    margin-left: 5px;
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+.error-code{
+    margin-left: 75px;
+}
+.resume_select_btn{
+    width: 185px;
+    height: 25px;
+    border: 0;
+    background: url(http://f3.v.veimg.cn/veryeast/resume/images/resume_select_btn.jpg) no-repeat;
+    line-height: 25px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 10px;
+    float: left;
+}
